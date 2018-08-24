@@ -1,26 +1,28 @@
 
 <ng-template #content let-c="close" let-d="dismiss">
   <div class="modal-header">
-    <h4 class="modal-title">Modal title</h4>
+    <h4 class="modal-title">Create Funnel</h4>
     <button type="button" class="close" aria-label="Close" (click)="d('Cross click')">
       <span aria-hidden="true">&times;</span>
     </button>
   </div>
   <div class="modal-body">
-    <p>One fine body&hellip;</p>
+    <p>TODO: Create funnel using clients</p>
   </div>
   <div class="modal-footer">
     <button type="button" class="btn btn-light" (click)="c('Close click')">Close</button>
   </div>
 </ng-template>
 
+<!--
 <div class="">
-  <!--<button class="btn btn-outline-primary mb-2 mr-2" (click)="openWindowCustomClass(content)">Modal with window custom class</button>
-  <button class="btn btn-outline-primary mb-2 mr-2" (click)="openBackDropCustomClass(content)">Modal with backdrop custom class</button>
-  <button class="btn btn-outline-primary mb-2 mr-2" (click)="openSm(content)">Small modal</button>
-  <button class="btn btn-outline-primary mb-2 mr-2" (click)="openLg(content)">Large modal</button>-->
-  <button class="btn btn-outline-primary mb-2 mr-2" (click)="openVerticallyCentered(content)">Create Funnel</button>
-</div>
+  <button class="btn btn-outline-primary mb-2 mr-2" (click)="openWindowCustomClass(content)">Modal with window custom class</button>
+    <button class="btn btn-outline-primary mb-2 mr-2" (click)="openBackDropCustomClass(content)">Modal with backdrop custom class</button>
+    <button class="btn btn-outline-primary mb-2 mr-2" (click)="openSm(content)">Small modal</button>
+    <button class="btn btn-outline-primary mb-2 mr-2" (click)="openLg(content)">Large modal</button>
+    <button class="btn btn-outline-primary mb-2 mr-2" (click)="openVerticallyCentered(content)">Create Funnel</button>
+  </div>
+-->
 <div class='card'>
   <div class='card-header'>
     <h2>{{pageTitle}}</h2>
@@ -28,7 +30,7 @@
   <div class='card-body'>
     <div class='row'>
       <div class='col-md-1'>
-        <button class='btn btn-primary'>
+        <button class='btn btn-primary' (click)="openVerticallyCentered(content)">
           New Funnel
         </button>
       </div>

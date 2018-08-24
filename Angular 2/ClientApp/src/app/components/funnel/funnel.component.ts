@@ -11,7 +11,7 @@ import { NgbModal, ModalDismissReasons } from '@ng-bootstrap/ng-bootstrap';
 export class FunnelComponent implements OnInit {
   closeResult: string;
 
-  constructor() { }
+  constructor(private modalService: NgbModal) { }
   pageTitle: string = '1040 Digital Funnel';
   funnels: IFunnel[] = [
     {
