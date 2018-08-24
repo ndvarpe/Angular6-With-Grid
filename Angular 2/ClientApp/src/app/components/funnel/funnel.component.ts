@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { IFunnel } from './funnel';
 
 @Component({
   selector: 'app-funnel',
@@ -9,7 +10,7 @@ export class FunnelComponent implements OnInit{
 
   constructor() { }
   pageTitle: string = '1040 Digital Funnel';
-  funnels: any[] = [
+  funnels: IFunnel[] = [
     {
       "funnelId": 1,
       "clientName": "Boothe, Marie",
