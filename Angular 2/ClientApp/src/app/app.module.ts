@@ -30,7 +30,7 @@ import { FunnelComponent } from './components/funnel/funnel.component';
       { path: '', component: HomeComponent, pathMatch: 'full' },
       { path: 'counter', component: CounterComponent },
       { path: 'fetch-data', component: FetchDataComponent },
-      { path: 'funnel', component: FunnelComponent },
+      { path: 'funnel', component: FunnelComponent }
     ])
   ],
   providers: [],
