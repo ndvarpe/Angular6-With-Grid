@@ -45,6 +45,13 @@
         </button>
       </div>
     </div>
+    <div class="row"><br/></div>
+    <div class='row'>
+      <div class='col-md-2'>Filter by Client Name:</div>
+      <div class='col-md-4'>
+        <input type='text' [(ngModel)]='listFilter' />
+      </div>
+    </div>
   </div>
   <div class='table-responsive'>
     <table class='table' *ngIf='funnels && funnels.length'>
@@ -61,10 +68,11 @@
         </tr>
       </thead>
       <tbody>
-        <tr *ngFor='let funnel of funnels'>
+        <tr *ngFor='let funnel of filteredFunnels'>
           <td>{{funnel.clientName}}</td>
           <td>{{funnel.taxYear}}</td>
-          <td>{{funnel.funnelStatus}}</td>
+          <td><pm-circles [status]='funnel.funnelStatus'
+          (statusClicked)='onStatusClicked($event)'></pm-circles></td>
           <td>{{funnel.funnelOpened}}</td>
           <td>{{funnel.signer}}</td>
           <td>{{funnel.lastActivity}}</td>

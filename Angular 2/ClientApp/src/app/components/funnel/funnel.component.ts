@@ -11,8 +11,21 @@ import { NgbModal, ModalDismissReasons } from '@ng-bootstrap/ng-bootstrap';
 export class FunnelComponent implements OnInit {
   closeResult: string;
 
-  constructor(private modalService: NgbModal) { }
-  pageTitle: string = '1040 Digital Funnel';
+  constructor(private modalService: NgbModal) {
+    this.filteredFunnels = this.funnels;
+    this.listFilter = '';
+  }
+  pageTitle: string = 'Digital Workflow Funnel';
+  _listFilter: string;
+  filteredFunnels: IFunnel[];
+  get listFilter(): string {
+    return this._listFilter;
+  }
+  set listFilter(value: string) {
+    this._listFilter = value;
+    this.filteredFunnels = this.listFilter ? this.performFilter(this.listFilter) : this.funnels;
+  }
+  
   funnels: IFunnel[] = [
     {
       "funnelId": 1,
@@ -96,5 +109,14 @@ export class FunnelComponent implements OnInit {
 
   openVerticallyCentered(content) {
     this.modalService.open(content, { centered: true });
+  }
+
+  performFilter(filterBy: string): IFunnel[] {
+    filterBy = filterBy.toLocaleLowerCase();
+    return this.funnels.filter((funnel: IFunnel) => funnel.clientName.toLocaleLowerCase().indexOf(filterBy) !== -1);
+  }
+
+  onStatusClicked(message: string): void {
+    this.pageTitle = 'Digital Workflow Funnel: ' + message;
   }
 }

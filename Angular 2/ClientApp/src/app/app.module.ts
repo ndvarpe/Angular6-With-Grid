@@ -11,6 +11,7 @@ import { HomeComponent } from './home/home.component';
 import { CounterComponent } from './counter/counter.component';
 import { FetchDataComponent } from './fetch-data/fetch-data.component';
 import { FunnelComponent } from './components/funnel/funnel.component';
+import { StatusComponent } from './components/status/status.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { FunnelComponent } from './components/funnel/funnel.component';
     HomeComponent,
     CounterComponent,
     FetchDataComponent,
-    FunnelComponent
+    FunnelComponent,
+    StatusComponent
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'ng-cli-universal' }),
@@ -30,7 +32,8 @@ import { FunnelComponent } from './components/funnel/funnel.component';
       { path: '', component: HomeComponent, pathMatch: 'full' },
       { path: 'counter', component: CounterComponent },
       { path: 'fetch-data', component: FetchDataComponent },
-      { path: 'funnel', component: FunnelComponent }
+      { path: 'funnel', component: FunnelComponent },
+      { path: 'status', component: StatusComponent }
     ])
   ],
   providers: [],
