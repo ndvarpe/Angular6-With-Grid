@@ -12,6 +12,7 @@ import { CounterComponent } from './counter/counter.component';
 import { FetchDataComponent } from './fetch-data/fetch-data.component';
 import { FunnelComponent } from './components/funnel/funnel.component';
 import { StatusComponent } from './components/status/status.component';
+import { ErrorsComponent } from './components/errors/errors.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { StatusComponent } from './components/status/status.component';
     CounterComponent,
     FetchDataComponent,
     FunnelComponent,
-    StatusComponent
+    StatusComponent,
+    ErrorsComponent
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'ng-cli-universal' }),
