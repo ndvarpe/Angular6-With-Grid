@@ -1,4 +1,4 @@
-import { IFunnel } from './funnel';
+import { IFunnel } from "../../models/funnel";
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 import { NgbModal, ModalDismissReasons } from '@ng-bootstrap/ng-bootstrap';
 import { FunnelService } from './funnel.service';
@@ -33,8 +33,7 @@ export class FunnelComponent implements OnInit {
       funnels => {
         this.funnels = funnels;
         this.filteredFunnels = this.funnels;
-      },
-      error => this.errorMessage = <any>error);
+      });
   }
 
   openBackDropCustomClass(content) {

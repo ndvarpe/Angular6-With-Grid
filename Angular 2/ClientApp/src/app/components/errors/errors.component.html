@@ -1,8 +1,0 @@
-<div *ngIf="errorsService.errorsServices.length">
-  <h3>Error</h3>
-  <button class="clear" (click)="errorsService.clear()">clear</button>
-  <br>
-  <ol>
-    <li *ngFor='let errorMessage of errorsService.errorMessages'> {{errorMessage}} </li>
-  </ol>
-</div>

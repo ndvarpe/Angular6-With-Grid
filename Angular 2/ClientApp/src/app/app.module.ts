@@ -12,7 +12,11 @@ import { CounterComponent } from './counter/counter.component';
 import { FetchDataComponent } from './fetch-data/fetch-data.component';
 import { FunnelComponent } from './components/funnel/funnel.component';
 import { StatusComponent } from './components/status/status.component';
-import { ErrorsComponent } from './components/errors/errors.component';
+import { httpInterceptorProviders } from '../http-interceptors/index';
+import { HttpErrorHandler } from '../common-services/error-handler/http-error-handler.service';
+import { AlertComponent } from './common-directives/alert/alert.component';
+import { AlertService } from '../common-services/alert/alert.service';
+
 
 @NgModule({
   declarations: [
@@ -23,7 +27,7 @@ import { ErrorsComponent } from './components/errors/errors.component';
     FetchDataComponent,
     FunnelComponent,
     StatusComponent,
-    ErrorsComponent
+    AlertComponent
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'ng-cli-universal' }),
@@ -38,7 +42,7 @@ import { ErrorsComponent } from './components/errors/errors.component';
       { path: 'status', component: StatusComponent }
     ])
   ],
-  providers: [],
+  providers: [httpInterceptorProviders, HttpErrorHandler, AlertService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
