@@ -33,7 +33,7 @@ namespace WebApi
             services.AddCors(options =>
             {
                 options.AddPolicy("AllowSpecificOrigin",
-                    builder => builder.WithOrigins("http://localhost:50748"));
+                    builder => builder.AllowAnyOrigin());
             });
         }
 

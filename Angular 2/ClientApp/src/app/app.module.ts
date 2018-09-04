@@ -12,10 +12,9 @@ import { CounterComponent } from './counter/counter.component';
 import { FetchDataComponent } from './fetch-data/fetch-data.component';
 import { FunnelComponent } from './components/funnel/funnel.component';
 import { StatusComponent } from './components/status/status.component';
-import { httpInterceptorProviders } from '../http-interceptors/index';
-import { HttpErrorHandler } from '../common-services/error-handler/http-error-handler.service';
-import { AlertComponent } from './common-directives/alert/alert.component';
-import { AlertService } from '../common-services/alert/alert.service';
+import { httpInterceptorProviders } from './http-interceptors/index';
+import { AlertComponent } from './components/alert/alert.component';
+import { AlertService } from './components/alert/alert.service';
 
 
 @NgModule({
@@ -42,7 +41,7 @@ import { AlertService } from '../common-services/alert/alert.service';
       { path: 'status', component: StatusComponent }
     ])
   ],
-  providers: [httpInterceptorProviders, HttpErrorHandler, AlertService],
+  providers: [httpInterceptorProviders, AlertService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

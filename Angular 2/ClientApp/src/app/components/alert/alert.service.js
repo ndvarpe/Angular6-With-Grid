@@ -10,7 +10,7 @@ var core_1 = require("@angular/core");
 var router_1 = require("@angular/router");
 var rxjs_1 = require("rxjs");
 var operators_1 = require("rxjs/operators");
-var alert_1 = require("../../app/models/alert");
+var alert_1 = require("../../models/alert");
 var AlertService = /** @class */ (function () {
     function AlertService(router) {
         var _this = this;

@@ -5,7 +5,7 @@ import {
 } from '@angular/common/http';
 
 import { finalize, tap } from 'rxjs/operators';
-import { AlertService } from '../common-services/alert/alert.service';
+import { AlertService } from '../components/alert/alert.service';
 
 @Injectable()
 export class ErrorLoggingInterceptor implements HttpInterceptor {
