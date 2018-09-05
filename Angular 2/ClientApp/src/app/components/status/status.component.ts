@@ -3,7 +3,7 @@ import { Component, OnChanges, Input, EventEmitter, Output } from "@angular/core
 @Component({
   templateUrl: './status.component.html',
   selector: 'pm-circles',
-  styleUrls: ['./status.component.css']
+  styleUrls: ['./status.component.scss']
 })
 export class StatusComponent implements OnChanges {
   @Input() status: number;
