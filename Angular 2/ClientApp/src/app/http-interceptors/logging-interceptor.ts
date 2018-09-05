@@ -8,7 +8,7 @@ import { finalize, tap } from 'rxjs/operators';
 import { AlertService } from '../components/alert/alert.service';
 
 @Injectable()
-export class ErrorLoggingInterceptor implements HttpInterceptor {
+export class LoggingInterceptor implements HttpInterceptor {
   constructor(private alertService: AlertService) { }
 
   intercept(req: HttpRequest<any>, next: HttpHandler) {

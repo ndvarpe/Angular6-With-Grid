@@ -31,11 +31,11 @@ export class AlertService {
   }
 
   // convenience methods
-  success(message: string) {
+  public success(message: string) {
     this.alert(new Alert({ message, type: AlertType.Success }));
   }
 
-  error(message: string) {
+  public error(message: string) {
     this.alert(new Alert({ message, type: AlertType.Error }));
   }
 

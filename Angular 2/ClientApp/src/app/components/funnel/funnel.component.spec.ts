@@ -1,4 +1,5 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { FormsModule } from '@angular/forms';
 
 import { FunnelComponent } from './funnel.component';
 
@@ -8,7 +9,8 @@ describe('FunnelComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ FunnelComponent ]
+      imports: [FormsModule],
+      declarations: [FunnelComponent ]
     })
     .compileComponents();
   }));

@@ -26,18 +26,20 @@
 
   <ItemGroup>
     <None Remove="ClientApp\src\app\components\alert\alert.component.ts" />
+    <None Remove="ClientApp\src\app\components\alert\alert.service.spec.ts" />
     <None Remove="ClientApp\src\app\home\home.service.ts" />
+    <None Remove="ClientApp\src\app\http-interceptors\logging-interceptor.ts" />
     <None Remove="ClientApp\src\app\models\alert.ts" />
-    <None Remove="ClientApp\src\app\http-interceptors\error-logging-interceptor.ts" />
     <None Remove="ClientApp\src\app\http-interceptors\index.ts" />
   </ItemGroup>
 
   <ItemGroup>
+    <TypeScriptCompile Include="ClientApp\src\app\components\alert\alert.service.spec.ts" />
     <TypeScriptCompile Include="ClientApp\src\app\components\alert\alert.component.ts" />
     <TypeScriptCompile Include="ClientApp\src\app\home\home.service.ts" />
     <TypeScriptCompile Include="ClientApp\src\app\models\alert.ts" />
     <TypeScriptCompile Include="ClientApp\src\app\components\alert\alert.service.ts" />
-    <TypeScriptCompile Include="ClientApp\src\app\http-interceptors\error-logging-interceptor.ts" />
+    <TypeScriptCompile Include="ClientApp\src\app\http-interceptors\logging-interceptor.ts" />
     <TypeScriptCompile Include="ClientApp\src\app\http-interceptors\index.ts" />
   </ItemGroup>
 
