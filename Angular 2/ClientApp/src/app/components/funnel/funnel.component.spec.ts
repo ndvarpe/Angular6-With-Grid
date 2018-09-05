@@ -2,6 +2,9 @@ import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { FormsModule } from '@angular/forms';
 
 import { FunnelComponent } from './funnel.component';
+import { StatusComponent } from '../status/status.component';
+import { HttpClient, HttpErrorResponse } from '@angular/common/http';
+import { HttpClientTestingModule, HttpTestingController } from '@angular/common/http/testing';
 
 describe('FunnelComponent', () => {
   let component: FunnelComponent;
@@ -9,8 +12,8 @@ describe('FunnelComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      imports: [FormsModule],
-      declarations: [FunnelComponent ]
+      imports: [HttpClientTestingModule, FormsModule],
+      declarations: [FunnelComponent, StatusComponent]
     })
     .compileComponents();
   }));
@@ -23,5 +26,6 @@ describe('FunnelComponent', () => {
 
   it('should create', () => {
     expect(component).toBeTruthy();
+    expect(component.pageTitle).toEqual('Digital Workflow Funnel');
   });
 });
