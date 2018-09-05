@@ -26,6 +26,11 @@ describe('FunnelComponent', () => {
 
   it('should create', () => {
     expect(component).toBeTruthy();
-    expect(component.pageTitle).toEqual('Digital Workflow Funnel');
+    expect(component.pageTitle).toEqual('Digital Workflow');
+    let app = fixture.debugElement.componentInstance;
   });
+
+
+
+
 });
