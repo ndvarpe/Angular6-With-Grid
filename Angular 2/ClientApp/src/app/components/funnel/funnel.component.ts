@@ -6,7 +6,7 @@ import { FunnelService } from './funnel.service';
 @Component({
   selector: 'app-funnel',
   templateUrl: './funnel.component.html',
-  styleUrls: ['./funnel.component.css'],
+  styleUrls: ['./funnel.component.scss'],
   encapsulation: ViewEncapsulation.None
 })
 export class FunnelComponent implements OnInit {
@@ -15,7 +15,7 @@ export class FunnelComponent implements OnInit {
   constructor(private modalService: NgbModal, private funnelService: FunnelService) {
   }
 
-  pageTitle: string = 'Digital Workflow Funnel';
+  pageTitle: string = 'Digital Workflow';
   _listFilter: string;
   funnels: IFunnel[];
   filteredFunnels: IFunnel[];

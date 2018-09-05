@@ -4,8 +4,9 @@
 */
 
 @import "https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700";
-@import "~bootstrap/dist/css/bootstrap.min.css";
-@import "~font-awesome/css/font-awesome.min.css";
+@import "~bootstrap/scss/bootstrap.scss";
+@import "~font-awesome/scss/font-awesome";
+@import "~font-awesome/scss/_variables.scss";
 
 html{
   height:100%;
