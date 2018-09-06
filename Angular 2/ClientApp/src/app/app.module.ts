@@ -15,7 +15,8 @@ import { StatusComponent } from './components/status/status.component';
 import { httpInterceptorProviders } from './http-interceptors/index';
 import { AlertComponent } from './components/alert/alert.component';
 import { AlertService } from './components/alert/alert.service';
-
+import { LoaderComponent } from './components/loader/loader.component';
+import { NgProgressModule } from '@ngx-progressbar/core';
 
 @NgModule({
   declarations: [
@@ -26,19 +27,22 @@ import { AlertService } from './components/alert/alert.service';
     FetchDataComponent,
     FunnelComponent,
     StatusComponent,
-    AlertComponent
+    AlertComponent,
+    LoaderComponent
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'ng-cli-universal' }),
     HttpClientModule,
     FormsModule,
+    NgProgressModule,
     NgbModule.forRoot(),
     RouterModule.forRoot([
       { path: '', component: HomeComponent, pathMatch: 'full' },
       { path: 'counter', component: CounterComponent },
       { path: 'fetch-data', component: FetchDataComponent },
       { path: 'funnel', component: FunnelComponent },
-      { path: 'status', component: StatusComponent }
+      { path: 'status', component: StatusComponent },
+      { path: 'loader', component: LoaderComponent }
     ])
   ],
   providers: [httpInterceptorProviders, AlertService],

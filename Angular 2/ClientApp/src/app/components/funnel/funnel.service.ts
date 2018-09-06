@@ -1,7 +1,7 @@
 import { Injectable } from "@angular/core";
 import { IFunnel } from "../../models/funnel";
 import { HttpClient, HttpErrorResponse } from "@angular/common/http"
-import { Observable, throwError } from "rxjs";
+import { Observable } from "rxjs";
 import { catchError, tap } from "rxjs/operators"
 
 @Injectable({
