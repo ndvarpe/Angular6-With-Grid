@@ -8,7 +8,7 @@ import { catchError, tap } from "rxjs/operators"
   providedIn: 'root'
 })
 export class FunnelService {
-  private funnelsUrl = 'https://localhost:44337/api/Funnel';
+  funnelsUrl: string = 'https://localhost:44337/api/Funnel';
   private handleError: any;
   constructor(private http: HttpClient) {
   }

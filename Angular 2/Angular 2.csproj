@@ -27,6 +27,7 @@
   <ItemGroup>
     <None Remove="ClientApp\src\app\components\alert\alert.component.ts" />
     <None Remove="ClientApp\src\app\components\alert\alert.service.spec.ts" />
+    <None Remove="ClientApp\src\app\components\funnel\funnel.service.spec.ts" />
     <None Remove="ClientApp\src\app\home\home.service.ts" />
     <None Remove="ClientApp\src\app\http-interceptors\logging-interceptor.spec.ts" />
     <None Remove="ClientApp\src\app\http-interceptors\loader-interceptor.ts" />
@@ -38,6 +39,7 @@
   <ItemGroup>
     <TypeScriptCompile Include="ClientApp\src\app\components\alert\alert.service.spec.ts" />
     <TypeScriptCompile Include="ClientApp\src\app\components\alert\alert.component.ts" />
+    <TypeScriptCompile Include="ClientApp\src\app\components\funnel\funnel.service.spec.ts" />
     <TypeScriptCompile Include="ClientApp\src\app\home\home.service.ts" />
     <TypeScriptCompile Include="ClientApp\src\app\http-interceptors\logging-interceptor.spec.ts" />
     <TypeScriptCompile Include="ClientApp\src\app\http-interceptors\loader-interceptor.ts" />
