@@ -93,6 +93,7 @@ namespace WebApi.Controllers
         [HttpGet]
         public ActionResult<List<Funnel>> Get()
         {
+            throw new Exception()
             return _context.Funnels.ToList();
         }
 

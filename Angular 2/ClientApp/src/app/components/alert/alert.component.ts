@@ -28,8 +28,8 @@ export class AlertComponent {
         });
     }
 
-    removeAlert(alert: Alert) {
-        this.alerts = this.alerts.filter(x => x !== alert);
+  removeAlert(alert: Alert) {
+      this.alerts = this.alerts.filter(x => x !== alert);
     }
 
     cssClass(alert: Alert) {
@@ -42,7 +42,7 @@ export class AlertComponent {
             case AlertType.Success:
                 return 'alert alert-success';
             case AlertType.Error:
-                return 'alert alert-danger';
+            return 'alert alert-danger';
         }
     }
 }
